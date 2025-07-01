@@ -1,10 +1,10 @@
 // routes/auth.routes.js
 const express = require("express");
 const router = express.Router();
+const { registerUser, loginUser } = require("../controllers/auth.controller");
 
-// Example placeholder route
-router.get("/", (req, res) => {
-  res.send("Auth route working");
-});
+router.post("/register", registerUser);
+router.post("/login", loginUser);
 
 module.exports = router;
+
